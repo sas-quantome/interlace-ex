@@ -1,2 +1,3 @@
+###### September 2, 2026: interlace-ex readme v1
+
 # interlace-ex
-Interlace Go examples with applications for human gene datasets
