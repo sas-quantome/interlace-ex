@@ -1,10 +1,8 @@
-###### September 3, 2026: interlace-ex cmd readme v2
+###### September 3, 2026: interlace-ex cmd readme v3
 
 # CMD
 
 15 **interlace-go** command-line applications build the **interlace-ex** Gene Entity datastack in less than 5 minutes using a cap of four CPUs max in a MacBook Pro M1.
-
-Reducing storage size by 10X or more yields organization-wide infrastructure cost savings.
 
 ```mermaid
 flowchart TB
