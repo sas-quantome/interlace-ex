@@ -1,8 +1,8 @@
-###### September 3, 2026: interlace-ex cmd readme v4
+###### September 3, 2026: interlace-ex cmd readme v5
 
 # CMD
 
-15 **interlace-go** command-line applications build the **interlace-ex** Gene Entity datastack in under 5 minutes, using up to 4 CPUs on a MacBook Pro M1 and less than 16GB of memory.
+15 [**interlace-go**](https://github.com/sas-quantome/interlace-go) command-line applications build the **interlace-ex** Gene Entity datastack in under 5 minutes, using up to 4 CPUs on a MacBook Pro M1 and less than 16GB of memory.
 
 ```mermaid
 flowchart TB
