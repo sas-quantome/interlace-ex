@@ -1,4 +1,4 @@
-###### September 3, 2026: interlace-ex readme v3
+###### September 4, 2026: interlace-ex readme v4
 
 # interlace-ex
 
@@ -11,3 +11,5 @@ Interlace Go examples with applications for human gene datasets.
 - [Introduction](#1-introduction)
 
 ### 1. Introduction
+
+The software engineering work discussed in this repository, **interlace-ex**, consolidates 57 GB of uncompressed gene and disease information into 1.4 GB of refined [**interlace-go**](https://github.com/sas-quantome/interlace-go) binary data assets. 15 Go [applications](./cmd/README.md) are created to demonstrate how to use the interlace-go packages.
