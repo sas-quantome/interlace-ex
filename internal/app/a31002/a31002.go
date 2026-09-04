@@ -6,8 +6,8 @@
 package a31002
 
 import (
-	"github.com/sas-quantome/go-interlace/pkg/contractor"
 	"github.com/sas-quantome/interlace-ex/internal/pkg/arranger"
+	"github.com/sas-quantome/interlace-go/pkg/contractor"
 )
 
 // constant program version number: to be appended to the ISO 8601 go-interlace version string.

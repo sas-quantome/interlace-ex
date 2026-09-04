@@ -63,12 +63,12 @@ clean: ## Remove the bin folder and test files leaving the download data files i
 
 .PHONY: check
 check: ## Validate URL links
-	bash ./scripts/automating/b60108 ./docs/go-interlace/d60100/urls.txt
+	bash ./scripts/bash/b31001 ./configs/input/url.txt
 
 .PHONY: download
-download: check ## Download files in the URL list, renames the non-persistent ones, and moves them to $ENV_ALT_DATA_PATH
-	bash ./scripts/automating/b60106 ./docs/go-interlace/d60100/urls.txt
-	bash ./scripts/automating/b60107
+download: check ## Downloads, renames the non-persistent ones, and moves all to $ENV_ALT_DATA_PATH
+	bash ./scripts/bash/b31002 ./configs/input/url.txt
+	bash ./scripts/bash/b31003
 
 .PHONY: help
 help: ## Display this help screen

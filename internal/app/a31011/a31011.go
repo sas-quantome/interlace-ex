@@ -59,7 +59,7 @@ func (app *Application) Start() bool {
 
 // Commit executes the application's work.
 //
-//goland:noinspection DuplicatedCode,DuplicatedCode
+//goland:noinspection DuplicatedCode
 func (app *Application) Commit() error {
 	app.refiner.Mgr.Say("setting up the refiner ...")
 	if commit, err := app.refiner.Commit(assetName); err != nil {

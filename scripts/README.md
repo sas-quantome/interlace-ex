@@ -1,3 +1,30 @@
-###### September 2, 2026: interlace-ex scripts readme v1
+###### September 4, 2026: interlace-ex scripts readme v2
 
 # Scripts
+
+```text
+scripts
+├── README.md
+└── bash
+    ├── b31001
+    ├── b31002
+    └── b31003
+```
+
+## Contents
+
+### [b31001]
+
+Reports broken URLs from a list of URLs using wget or curl.
+
+### [b31002]
+
+Downloads a list of URLs using wget or curl.
+
+### [b31003]
+
+Moves the files to the `ENV_ALT_DATA_PATH` with stable filenames.
+
+[b31001]: ./bash/b31001
+[b31002]: ./bash/b31002
+[b31003]: ./bash/b31003
