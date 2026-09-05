@@ -1,4 +1,4 @@
-###### September 5, 2026: interlace-ex readme v9
+###### September 5, 2026: interlace-ex readme v10
 
 # interlace-ex
 
@@ -42,10 +42,10 @@ The **interlace-ex** repository provides tools to crystallize knowledge from all
 
 ### 2. Data Providers
 
-- [Ancestry category label distribution in the GWAS Catalog](https://www.ebi.ac.uk/gwas/docs/ancestry-data)
+- [Ancestry Category Label Distribution in the GWAS Catalog](https://www.ebi.ac.uk/gwas/docs/ancestry-data)
 - [NCBI ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/)
 - [EBI GWAS Catalog](https://www.ebi.ac.uk/gwas/)
-- [Gender, Sex, and Sexual Orientation ontology](https://obofoundry.org/ontology/gsso.html)
+- [Gender, Sex, and Sexual Orientation Ontology](https://obofoundry.org/ontology/gsso.html)
 - [NCBI GeneRIF](https://www.ncbi.nlm.nih.gov/gene/about-generif)
 - [Gene Ontology](https://www.geneontology.org/)
 - [Human Phenotype Ontology](https://hpo.jax.org/)
