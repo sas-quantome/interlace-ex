@@ -1,4 +1,4 @@
-###### September 4, 2026: interlace-ex readme v5
+###### September 5, 2026: interlace-ex readme v6
 
 # interlace-ex
 
