@@ -1,4 +1,4 @@
-###### September 5, 2026: interlace-ex readme v6
+###### September 5, 2026: interlace-ex readme v7
 
 # interlace-ex
 
@@ -21,7 +21,7 @@ Welcome to **interlace-ex**! An educational repository consisting of **interlace
 
 The software engineering outcome of **interlace-ex** consolidates 57 GB of uncompressed gene and disease information into 1.4 GB of refined **interlace-go** binary data assets, ready to load into memory and power up basic research. Consolidation and data refinement take less than five minutes on a modern personal computer. This enables daily updates across [23 IP addresses](configs/input/url.txt). Nonetheless, this work aims to help innovators learn to use the **interlace-go** packages to create tailor-made datastacks in any data domain. 
 
-15 Go programs are offered as code examples to guide the use of **interlace-go** for writing command-line applications. The program [examples](./cmd) create one **Interlace Entity**, named *Gene*, and 14 **Interlace Assets**:
+[15 Go programs](./cmd/README.md) are offered as code examples to guide the use of **interlace-go** for writing command-line applications. These program examples create one **Interlace Entity**, named *Gene*, and **14 Interlace Assets**:
 
 1) Gene Product
 2) Gene Synonym
