@@ -1,4 +1,4 @@
-###### September 5, 2026: interlace-ex readme v7
+###### September 5, 2026: interlace-ex readme v8
 
 # interlace-ex
 
@@ -23,20 +23,20 @@ The software engineering outcome of **interlace-ex** consolidates 57 GB of uncom
 
 [15 Go programs](./cmd/README.md) are offered as code examples to guide the use of **interlace-go** for writing command-line applications. These program examples create one **Interlace Entity**, named *Gene*, and **14 Interlace Assets**:
 
-1) Gene Product
-2) Gene Synonym
-3) Gene Metadata
-4) Gene PubMed Reference
-5) Gene Function
-6) Gene Ontology
-7) Gene Medical Genetics
-8) Gene Ortholog
-9) Gene Molecular Interaction
-10) Gene Genetic Variation
-11) Gene Genomic Variation & Ancestry
-12) Gene Pathway
-13) Gene Chemical Reaction
-14) Gene Protein Interaction
+1) *Gene* Product
+2) *Gene* Synonym
+3) *Gene* Metadata
+4) *Gene* PubMed Reference
+5) *Gene* Function
+6) *Gene* Ontology
+7) *Gene* Medical Genetics
+8) *Gene* Ortholog
+9) *Gene* Molecular Interaction
+10) *Gene* Genetic Variation
+11) *Gene* Genomic Variation & Ancestry
+12) *Gene* Pathway
+13) *Gene* Chemical Reaction
+14) *Gene* Protein Interaction
 
 The **interlace-ex** repository provides tools to crystallize knowledge from all known genes in the human genome, along with code examples to help you build your own **interlace-go** data assets. 
 
