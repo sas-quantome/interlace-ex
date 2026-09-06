@@ -1,3 +1,6 @@
+#
+# Attention: update the file:///PATH/TO/FILE.EXT#UNIQUE_ID with your own paths.
+#
 # Use this URI file to facilitate applications finding their correct resources.
 # By default, applications do not download files from the web if they are already present in the data directory.
 # You can download all files in advance by running the b31001 (URL checker), then b31002 (downloader), and last b31003.

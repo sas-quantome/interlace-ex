@@ -1,0 +1,63 @@
+#!/bin/bash
+#
+# Builds the Gene datastack in one command-line (please update the file:/// paths in the configs/uri.txt file).
+# Applications a31001..a31015 must be installed first with make install, see the provided Makefile.
+# This script executes a31001..a31015 in sequential order.
+# This script is not a production pipeline, and it takes longer than 5 minutes.
+# To build it in less than 5 minutes, modify this script to run multiple processes in parallel, and apply the following:
+# 1) Execute a31002 after a31001 is done
+# 2) Execute a31011 after a31002 is done
+# 3) Execute a31014 after a31002 is done
+# 4) Execute a31015 after a31011 is done
+# Four jobs in parallel works well in a multicore personal computer with at least 16 GB of memory.
+# Balance the number of parallel jobs with memory and IO load limits.
+# Take a look at the flowchart in the cmd/README.md to visualize the dependency graph.
+
+# exit at first error
+set -e
+
+if [ -z "$1" ]; then
+    echo "Usage: $0 uri.txt"
+    exit 1
+fi
+
+UF="$1"
+
+if [ ! -f "$UF" ]; then
+    echo "Error: File '$UF' not found!"
+    exit 1
+fi
+
+echo "URI File: ${UF}"
+
+if [[ -z "${ENV_AEE_BASE_PATH}" ]]; then
+  echo "Error: ENV_AEE_BASE_PATH is unset"
+  exit 1
+else
+  BP="${ENV_AEE_BASE_PATH}"
+fi
+
+echo "Base path: ${BP}"
+
+if [[ -z "${ENV_ALT_DATA_PATH}" ]]; then
+  echo "Error: ENV_ALT_DATA_PATH is unset"
+  exit 1
+else
+  DP="${ENV_ALT_DATA_PATH}"
+fi
+
+echo "Data path: ${DP}"
+
+TT=$(date +%Y%m%d%H%M%S)
+
+echo "Time Tag: ${TT}"
+
+a31001 -log a31001.log -event-time-tag "${TT}" -uri-inp-file "${UF}"
+a31002 -log a31002.log -event-time-tag "${TT}"
+
+for i in a31003 a31004 a31005 a31006 a31007 a31008 a31009 a31010 a31011 a31012 a31013 a31014 a31015
+do
+    "${i}" -log "${i}".log -event-time-tag "${TT}" -uri-inp-file "${UF}"
+done
+
+echo "All jobs completed."

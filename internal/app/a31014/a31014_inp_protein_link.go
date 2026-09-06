@@ -47,7 +47,7 @@ func (app *Application) parseProteinInteraction(cw *cowriter.Cowriter) error {
 		return runner.ValidateErrors(err, ska.Close())
 	}
 
-	found, missing, row := 0, 0, 0
+	found, missing, row, tuples := 0, 0, 0, 0
 	var lid, nid string
 	var gidStr string // Cache the stringified Gene ID
 	idx := -1
@@ -89,12 +89,14 @@ func (app *Application) parseProteinInteraction(cw *cowriter.Cowriter) error {
 				if err = cw.WriteString(fmt.Sprintf("%s\t%s\t%s\t%s\n", col2, nid, gidStr, score)); err != nil {
 					return runner.ValidateErrors(err, ska.Close())
 				}
+				tuples++
 			}
 		}
 	}
 	app.refiner.Mgr.Say(fmt.Sprintf("total STRING DB rows counted: %d", row))
 	app.refiner.Mgr.Say(fmt.Sprintf("total STRING DB records with GeneID: %d", found))
 	app.refiner.Mgr.Say(fmt.Sprintf("total STRING DB records with no GeneID: %d", missing))
+	app.refiner.Mgr.Say(fmt.Sprintf("total STRING DB tuples created: %d", tuples))
 	return ska.Close()
 }
 

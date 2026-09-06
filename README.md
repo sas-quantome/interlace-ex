@@ -1,4 +1,4 @@
-###### September 5, 2026: interlace-ex readme v10
+###### September 6, 2026: interlace-ex readme v11
 
 # interlace-ex
 
@@ -11,15 +11,12 @@ Welcome to **interlace-ex**! An educational repository consisting of **interlace
 1) [Introduction](#1-introduction)
 2) [Data Providers](#2-data-providers)
 3) [Data Creators and Peer-reviewed Journal References](#3-data-creators-and-peer-reviewed-journal-references)
-4) Cloning
-5) Compiling
-6) Downloading
-7) Interlacing
-8) Innovating
+4) Build the *Gene* Datastack
+5) Develop Your Own Datastack
 
 ### 1. Introduction
 
-The software engineering outcome of **interlace-ex** consolidates 57 GB of uncompressed gene and disease information into 1.4 GB of refined **interlace-go** binary data assets, ready to load into memory and power up basic research. Consolidation and data refinement take less than five minutes on a modern personal computer. This enables daily updates across [23 IP addresses](configs/input/url.txt). Nonetheless, this work aims to help innovators learn to use the **interlace-go** packages to create tailor-made datastacks in any data domain. 
+The software engineering outcome of **interlace-ex** consolidates 57 GB of uncompressed gene and disease information into 1.4 GB of refined **interlace-go** binary data assets, ready to load into memory and power up basic research. Consolidation and data refinement take less than five minutes on a modern personal computer. This enables daily updates across [23 IP addresses](configs/input/url.txt). However, this work aims to help innovators learn to use the **interlace-go** [library] to create tailor-made datastacks in any data domain. 
 
 [15 Go programs](./cmd/README.md) are offered as code examples to guide the use of **interlace-go** for writing command-line applications. These program examples create one **Interlace Entity**, named *Gene*, and **14 Interlace Assets**:
 
@@ -176,3 +173,5 @@ UniProt Consortium.
 Nucleic Acids Res. 2025 Jan 6; 53(D1): D609-D617.
 
 doi: 10.1093/nar/gkae1010. PMID: 39552041; PMCID: PMC11701636.
+
+[library]: https://github.com/sas-quantome/interlace-go#interlace-go

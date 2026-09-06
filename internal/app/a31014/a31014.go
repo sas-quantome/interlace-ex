@@ -16,7 +16,7 @@ import (
 
 // constant program version number: to be appended to the ISO 8601 go-interlace version string.
 const (
-	programVersion = "15"                       // Increment this number for each release.
+	programVersion = "16"                       // Increment this number for each release.
 	primaryInpFile = "STRING_DB"                // STRING DB protein interactions.
 	assetName      = "protein_interaction"      // The entity's asset name.
 	queryAssetName = "synonym"                  // The entity's query asset name.'

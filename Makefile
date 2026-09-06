@@ -70,6 +70,14 @@ download: check ## Downloads, renames the non-persistent ones, and moves all to 
 	bash ./scripts/bash/b31002 ./configs/input/url.txt
 	bash ./scripts/bash/b31003
 
+.PHONY: gene
+gene: ## Build the Gene datastack, make sure the uri.txt file have your file:/// paths
+	bash ./scripts/bash/b31004 ./configs/input/uri.txt
+	grep "end of process" *.log
+	grep -w warnings *.log
+	grep -w elapsed *.log
+	grep "tuples created" *.log
+
 .PHONY: help
 help: ## Display this help screen
 	@grep -h -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
