@@ -1,8 +1,8 @@
-###### September 3, 2026: interlace-ex cmd readme v5
+###### September 7, 2026: interlace-ex cmd readme v6
 
 # CMD
 
-15 [**interlace-go**](https://github.com/sas-quantome/interlace-go) command-line applications build the **interlace-ex** Gene Entity datastack in under 5 minutes, using up to 4 CPUs on a MacBook Pro M1 and less than 16GB of memory.
+15 [**interlace-go**](https://github.com/sas-quantome/interlace-go) command-line applications build the **interlace-ex** Gene Entity datastack in under 5 minutes, using up to four workers simultaneously (four CPUs) on a MacBook Pro M1.
 
 ```mermaid
 flowchart TB
@@ -47,8 +47,8 @@ flowchart TB
 
 Notice the difference in disk space: 
 
-- the input is 57 GB of uncompressed text data, and 
-- the output is 1.4 GB of uncompressed and refined binary data assets. 
+- the input is 57 GB of uncompressed raw text data, and 
+- the output is 1.4 GB of uncompressed refined data assets. 
 
 Part of this reduction comes from excluding non-human genes, yet most input files in the **interlace-ex** are downloaded exclusively for human genes. 
 

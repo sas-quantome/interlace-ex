@@ -1,4 +1,4 @@
-###### September 6, 2026: interlace-ex readme v11
+###### September 7, 2026: interlace-ex readme v12
 
 # interlace-ex
 
@@ -11,14 +11,15 @@ Welcome to **interlace-ex**! An educational repository consisting of **interlace
 1) [Introduction](#1-introduction)
 2) [Data Providers](#2-data-providers)
 3) [Data Creators and Peer-reviewed Journal References](#3-data-creators-and-peer-reviewed-journal-references)
-4) Build the *Gene* Datastack
-5) Develop Your Own Datastack
+4) [Build the *Gene* Datastack](#4-build-the-gene-datastack)
+5) [Query the *Gene* Datastack](#5-query-the-gene-datastack)
+6) [Develop Your Own Datastack](#6-develop-your-own-datastack)
 
 ### 1. Introduction
 
-The software engineering outcome of **interlace-ex** consolidates 57 GB of uncompressed gene and disease information into 1.4 GB of refined **interlace-go** binary data assets, ready to load into memory and power up basic research. Consolidation and data refinement take less than five minutes on a modern personal computer. This enables daily updates across [23 IP addresses](configs/input/url.txt). However, this work aims to help innovators learn to use the **interlace-go** [library] to create tailor-made datastacks in any data domain. 
+The software engineering outcome of **interlace-ex** consolidates 57 GB of uncompressed gene and disease information into 1.4 GB of refined **interlace-go** binary data assets, ready to load into memory and power up basic research. Consolidation and data refinement take less than five minutes on a modern personal computer. This enables daily updates across [23 IP addresses](configs/input/url.txt). The **interlace-ex** code provides many examples of transforming raw data into refined binary assets using simply the **interlace-go** [library].
 
-[15 Go programs](./cmd/README.md) are offered as code examples to guide the use of **interlace-go** for writing command-line applications. These program examples create one **Interlace Entity**, named *Gene*, and **14 Interlace Assets**:
+[15 Go programs](./cmd/README.md) are offered as starting models for creating command-line tools that make robust datasets. The ensemble of these Go programs creates one **Interlace Entity**, named *Gene*, and 14 **Interlace Assets**:
 
 1) *Gene Product*
 2) *Gene Synonym*
@@ -39,6 +40,8 @@ The **interlace-ex** repository provides tools to crystallize knowledge from all
 
 ### 2. Data Providers
 
+The *Gene* datastack is possible thanks to the following bioinformatics resources:
+
 - [Ancestry Category Label Distribution in the GWAS Catalog](https://www.ebi.ac.uk/gwas/docs/ancestry-data)
 - [NCBI ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/)
 - [EBI GWAS Catalog](https://www.ebi.ac.uk/gwas/)
@@ -57,6 +60,7 @@ The **interlace-ex** repository provides tools to crystallize knowledge from all
 
 ### 3. Data Creators and Peer-reviewed Journal References
 
+The following papers describe in detail the datasets used to create the *Gene* datastack:
 
 #### [A standardized framework for representation of ancestry data in genomics studies, with application to the NHGRI-EBI GWAS Catalog.](https://pubmed.ncbi.nlm.nih.gov/29448949/)
 
@@ -175,3 +179,9 @@ Nucleic Acids Res. 2025 Jan 6; 53(D1): D609-D617.
 doi: 10.1093/nar/gkae1010. PMID: 39552041; PMCID: PMC11701636.
 
 [library]: https://github.com/sas-quantome/interlace-go#interlace-go
+
+### 4. Build the *Gene* Datastack
+
+### 5. Query the *Gene* Datastack
+
+### 6. Develop Your Own Datastack

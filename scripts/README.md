@@ -1,4 +1,4 @@
-###### September 6, 2026: interlace-ex scripts readme v3
+###### September 7, 2026: interlace-ex scripts readme v4
 
 # Scripts
 
@@ -33,3 +33,4 @@ Builds the Gene datastack in one command-line.
 [b31001]: ./bash/b31001
 [b31002]: ./bash/b31002
 [b31003]: ./bash/b31003
+[b31004]: ./bash/b31004
