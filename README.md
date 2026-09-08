@@ -225,13 +225,11 @@ make build
 ```
 
 #### 4.7 Make Install
-Compile the software and install the binaries in the equivalent of `$GOPATH/bin`:
+Compile the software and install the binaries, you will find them in your `$GOPATH/bin`:
 ```bash
-GOPATH="where/ever/you/want"
 cd "${REPO_PATH}/interlace-ex"
 make install
 ```
-**Attention:** if `GOPATH="where/ever/you/want"` then `make` expects: `where/ever/you/want/bin`.
 
 #### 4.8 Cleanup
 Remove the `bin` folder:
