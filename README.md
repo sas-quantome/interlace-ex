@@ -1,8 +1,8 @@
-###### September 8, 2026: interlace-ex readme v13
+###### September 8, 2026: interlace-ex readme v14
 
 # interlace-ex
 
-Welcome to **interlace-ex**! Learn how to use the **interlace-go** [library] with the **interlace-ex** code examples. This open-source educational repository guides you through consolidating human gene data, including products, interactants, genetic variants, and diseases, as a hands-on data refinement exercise.
+Welcome to **interlace-ex**! Learn how to use the **interlace-go** library with the **interlace-ex** code examples. This open-source educational repository guides you through consolidating human gene data, including products, interactants, genetic variants, and diseases, as a hands-on data refinement exercise.
 
 ![interlace-ex](assets/interlace-ex.png)
 
@@ -16,6 +16,8 @@ Welcome to **interlace-ex**! Learn how to use the **interlace-go** [library] wit
 6) [Develop Your Own Datastack](#6-develop-your-own-datastack)
 
 ### 1. Introduction
+
+Gene data from bioinformatics resources is indispensable to basic research, yet it is massive and complex. The **interlace-go** [library] simplifies data refinement for building and maintaining clean-slate datasets as primary storage ready for downstream processing. To demonstrate this in practice, human gene data provide a good test case for interlace-go.
 
 The software engineering outcome of **interlace-ex** consolidates 57 GB of uncompressed gene and disease information into 1.4 GB of refined **interlace-go** binary data assets, ready to load into memory and power up basic research. 
 
