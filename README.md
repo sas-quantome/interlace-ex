@@ -1,8 +1,8 @@
-###### September 7, 2026: interlace-ex readme v12
+###### September 8, 2026: interlace-ex readme v13
 
 # interlace-ex
 
-Welcome to **interlace-ex**! An educational repository consisting of **interlace-go** applications for consolidating human gene data, including products, interactants, genetic variants, and disease.
+Welcome to **interlace-ex**! Learn how to use the **interlace-go** [library] with the **interlace-ex** code examples. This open-source educational repository guides you through consolidating human gene data, including products, interactants, genetic variants, and diseases, as a hands-on data refinement exercise.
 
 ![interlace-ex](assets/interlace-ex.png)
 
@@ -17,9 +17,13 @@ Welcome to **interlace-ex**! An educational repository consisting of **interlace
 
 ### 1. Introduction
 
-The software engineering outcome of **interlace-ex** consolidates 57 GB of uncompressed gene and disease information into 1.4 GB of refined **interlace-go** binary data assets, ready to load into memory and power up basic research. Consolidation and data refinement take less than five minutes on a modern personal computer. This enables daily updates across [23 IP addresses](configs/input/url.txt). The **interlace-ex** code provides many examples of transforming raw data into refined binary assets using simply the **interlace-go** [library].
+The software engineering outcome of **interlace-ex** consolidates 57 GB of uncompressed gene and disease information into 1.4 GB of refined **interlace-go** binary data assets, ready to load into memory and power up basic research. 
 
-[15 Go programs](./cmd/README.md) are offered as starting models for creating command-line tools that make robust datasets. The ensemble of these Go programs creates one **Interlace Entity**, named *Gene*, and 14 **Interlace Assets**:
+Consolidation and data refinement take less than five minutes on a modern personal computer. This agility makes daily updates possible across [23 IP addresses](configs/input/url.txt). 
+
+The **interlace-ex** code provides many examples of transforming raw data into refined binary assets using simply the **interlace-go** [library].
+
+[15 Go programs](./cmd/README.md) are offered as starting models for creating command-line tools that make robust datasets. The ensemble of these Go programs creates one **Interlace Entity**, named *Gene*, and 14 **Interlace Assets** that serve as a point of reference to evaluate quality and performance:
 
 1) *Gene Product*
 2) *Gene Synonym*
@@ -36,7 +40,7 @@ The software engineering outcome of **interlace-ex** consolidates 57 GB of uncom
 13) *Gene Chemical Reaction*
 14) *Gene Protein Interaction*
 
-The **interlace-ex** repository provides tools to crystallize knowledge from all known genes in the human genome, along with code examples to help you build your own **interlace-go** data assets. 
+The **interlace-ex** repository tools crystallize knowledge from all known genes in the human genome, along with code examples to help you add data assets to the Gene entity or build your own in other domains.
 
 ### 2. Data Providers
 
@@ -178,10 +182,75 @@ Nucleic Acids Res. 2025 Jan 6; 53(D1): D609-D617.
 
 doi: 10.1093/nar/gkae1010. PMID: 39552041; PMCID: PMC11701636.
 
-[library]: https://github.com/sas-quantome/interlace-go#interlace-go
-
 ### 4. Build the *Gene* Datastack
+
+### 4.1 Prepare Your Interlace Codebase Path
+Declare a place where to clone one or more Interlace repositories the standard way somewhere in your computer. For example:
+```bash
+REPO_PATH="${HOME}/github.com/sas-quantome"
+```
+
+### 4.2 Create Your Codebase
+Create the directory:
+```bash
+mkdir -p "${REPO_PATH}"
+```
+
+### 4.3 Clone the interlace-ex 
+Clone the repository in the `sas-quantome` folder:
+```bash
+cd "${REPO_PATH}"
+git clone https://github.com/sas-quantome/interlace-ex.git
+```
+
+### 4.4 Build the Toolchain
+Ensure you have [Go](https://go.dev/learn/) installed, then compile the example applications; you will find the compiled products in the `bin` filder:
+```bash
+cd "${REPO_PATH}/interlace-ex"
+make build
+```
+
+### 4.5 Run the Test Suite
+Validate the test packages and integration pipelines:
+```bash
+cd "${REPO_PATH}/go-interlace"
+make test
+```
+
+### 4.6 Run Vet
+Scan the source code for suspicious constructs and locate them if any are detected:
+```bash
+cd "${REPO_PATH}/go-interlace"
+make vet
+```
+
+### 4.7 Visualize the Coverage
+Reformat the coverage results and print them to standard output:
+```bash
+cd "${REPO_PATH}/go-interlace"
+make coverage
+```
+
+### 4.8 Cleanup
+Remove all the Quick Start files created including the `bin` folder:
+```bash
+cd "${REPO_PATH}/go-interlace"
+make clean
+```
+
+### 4.9 Make Install
+Compile the software and install the binaries in the equivalent of `$GOPATH/bin`:
+```bash
+GOPATH="where/ever/you/want"
+cd "${REPO_PATH}/go-interlace"
+make install
+```
+**Attention:** if `GOPATH="where/ever/you/want"` then `make` expects: `where/ever/you/want/bin`.
 
 ### 5. Query the *Gene* Datastack
 
 ### 6. Develop Your Own Datastack
+
+
+
+[library]: https://github.com/sas-quantome/interlace-go#interlace-go
