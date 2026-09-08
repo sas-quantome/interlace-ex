@@ -2,7 +2,7 @@
 
 # interlace-ex
 
-Welcome to **interlace-ex**! Learn how to use the **interlace-go** library with the **interlace-ex** code examples. This open-source educational repository guides you through consolidating human gene data, including products, interactants, genetic variants, and diseases, as a hands-on data refinement exercise.
+Welcome to **interlace-ex**! Learn how to use the **interlace-go library** with the **interlace-ex** code examples. This open-source educational repository guides you through consolidating human gene data, including products, interactants, genetic variants, and diseases, as a hands-on data refinement exercise.
 
 ![interlace-ex](assets/interlace-ex.png)
 
@@ -17,13 +17,13 @@ Welcome to **interlace-ex**! Learn how to use the **interlace-go** library with 
 
 ### 1. Introduction
 
-Gene data from bioinformatics resources is indispensable to basic research, yet it is massive and complex. The **interlace-go** [library] simplifies data refinement for building and maintaining clean-slate datasets as primary storage ready for downstream processing. To demonstrate this in practice, human gene data is a good test case for **interlace-go**.
+Gene data from bioinformatics resources is indispensable to basic research, yet it is massive and complex. The [**interlace-go library**](https://github.com/sas-quantome/interlace-go#interlace-go) simplifies data refinement for building and maintaining clean-slate datasets as primary storage ready for downstream processing. To demonstrate this in practice, human gene data is a good test case for **interlace-go**.
 
 The software engineering outcome of **interlace-ex** consolidates 57 GB of uncompressed gene and disease information into 1.4 GB of refined **interlace-go** binary data assets, ready to load into memory and power up basic research. 
 
 Consolidation and data refinement take less than five minutes on a modern personal computer. This agility makes daily updates possible across [23 IP addresses](configs/input/url.txt). 
 
-The **interlace-ex** code provides many examples of transforming raw data into refined binary assets using simply the **interlace-go** [library].
+The **interlace-ex** code provides many examples of transforming raw data into refined binary assets using simply the **interlace-go**.
 
 [15 Go programs](./cmd/README.md) are offered as starting models for creating command-line tools that make robust datasets. The ensemble of these Go programs creates one **Interlace Entity**, named *Gene*, and 14 **Interlace Assets** that serve as a point of reference to evaluate quality and performance:
 
@@ -253,6 +253,3 @@ make install
 
 ### 6. Develop Your Own Datastack
 
-
-
-[library]: https://github.com/sas-quantome/interlace-go#interlace-go
