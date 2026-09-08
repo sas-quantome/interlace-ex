@@ -1,7 +1,5 @@
 DEBUG ?= false
 
-COV="./coverage.txt"
-
 PKG_VERSION ?= $(shell git describe --tags 2>/dev/null || git rev-parse --short HEAD)
 DATE_FMT = +%Y-%m-%d
 BUILD_DATE ?= $(shell date "$(DATE_FMT)")
@@ -45,18 +43,6 @@ install: ## Install cmd applications in the equivalent to $GOPATH/bin
 	GO111MODULE=on go install -trimpath -ldflags "$(GO_LDFLAGS) -X main.debugMode=$(DEBUG)" ./cmd/a31014
 	GO111MODULE=on go install -trimpath -ldflags "$(GO_LDFLAGS) -X main.debugMode=$(DEBUG)" ./cmd/a31015
 
-.PHONY: test
-test: ## Run tests
-	go test -coverprofile $(COV) ./...
-
-.PHONY: coverage
-coverage: ## Run coverage report
-	go tool cover -func $(COV)
-
-.PHONY: vet
-vet: ## Run code issues detection
-	go vet ./...
-
 .PHONY: clean
 clean: ## Remove the bin folder and test files leaving the download data files intact
 	rm -rf ./bin $(COV)
@@ -71,12 +57,13 @@ download: check ## Downloads, renames the non-persistent ones, and moves all to 
 	bash ./scripts/bash/b31003
 
 .PHONY: gene
-gene: ## Build the Gene datastack, make sure the uri.txt file have your file:/// paths
+gene: ## Build the Gene datastack, make sure the uri.txt file have your local file:/// paths
 	bash ./scripts/bash/b31004 ./configs/input/uri.txt
 	grep "end of process" *.log
 	grep -w warnings *.log
 	grep -w elapsed *.log
 	grep "tuples created" *.log
+	rm *.log
 
 .PHONY: help
 help: ## Display this help screen

@@ -1,8 +1,8 @@
-###### September 8, 2026: interlace-ex readme v16
+###### September 8, 2026: interlace-ex readme v17
 
 # interlace-ex
 
-Welcome to **interlace-ex**! Learn how to use the **interlace-go library** with the **interlace-ex** code examples. This open-source educational repository guides you through consolidating human gene data, including products, interactants, genetic variants, and diseases, as a hands-on data refinement exercise.
+Welcome to **interlace-ex**! Learn how to use the **interlace-go** library with the **interlace-ex** code examples. This open-source educational repository guides you through consolidating human gene data, including products, interactants, genetic variants, and diseases, as a hands-on data refinement exercise.
 
 ![interlace-ex](assets/interlace-ex.png)
 
@@ -11,19 +11,20 @@ Welcome to **interlace-ex**! Learn how to use the **interlace-go library** with 
 1) [Introduction](#1-introduction)
 2) [Data Providers](#2-data-providers)
 3) [Data Creators and Peer-reviewed Journal References](#3-data-creators-and-peer-reviewed-journal-references)
-4) [Build the *Gene* Datastack](#4-build-the-gene-datastack)
-5) [Query the *Gene* Datastack](#5-query-the-gene-datastack)
-6) [Develop Your Own Datastack](#6-develop-your-own-datastack)
+4) [Clone, Compile, and Install](#4-clone-compile-and-install)
+5) [Build the *Gene* Datastack](#5-build-the-gene-datastack)
+6) [Query the *Gene* Datastack](#6-query-the-gene-datastack)
+7) [Develop Your Own Datastack](#7-develop-your-own-datastack)
 
 ### 1. Introduction
 
-Gene data from bioinformatics resources is indispensable to basic research, yet it is massive and complex. The [**interlace-go library**](https://github.com/sas-quantome/interlace-go#interlace-go) simplifies data refinement for building and maintaining clean-slate datasets as primary storage ready for downstream processing. To demonstrate this in practice, human gene data is a good test case for **interlace-go**.
+Gene data from bioinformatics resources is indispensable to basic research, yet it is global, massive, and complex. The **interlace-go** [library](https://github.com/sas-quantome/interlace-go#interlace-go) simplifies data refinement for building and maintaining clean-slate datasets as primary storage ready for downstream processing. To demonstrate this in practice, human gene data is a good test case for **interlace-go**.
 
 The software engineering outcome of **interlace-ex** consolidates 57 GB of uncompressed gene and disease information into 1.4 GB of refined **interlace-go** binary data assets, ready to load into memory and power up basic research. 
 
 Consolidation and data refinement take less than five minutes on a modern personal computer. This agility makes daily updates possible across [23 IP addresses](configs/input/url.txt). 
 
-The **interlace-ex** code provides many examples of transforming raw data into refined binary assets using simply the **interlace-go**.
+The **interlace-ex** code provides many examples of transforming raw data into refined binary assets using simply **interlace-go**.
 
 [15 Go programs](./cmd/README.md) are offered as starting models for creating command-line tools that make robust datasets. The ensemble of these Go programs creates one **Interlace Entity**, named *Gene*, and 14 **Interlace Assets** that serve as a point of reference to evaluate quality and performance:
 
@@ -184,72 +185,323 @@ Nucleic Acids Res. 2025 Jan 6; 53(D1): D609-D617.
 
 doi: 10.1093/nar/gkae1010. PMID: 39552041; PMCID: PMC11701636.
 
-### 4. Build the *Gene* Datastack
+### 4. Clone, Compile, and Install
 
-### 4.1 Prepare Your Interlace Codebase Path
-Declare a place where to clone one or more Interlace repositories the standard way somewhere in your computer. For example:
+#### 4.1 Download and Install Go
+
+Download and install Go from [https://go.dev/doc/install](https://go.dev/doc/install). It takes less than 5 minutes to complete!
+
+#### 4.2 Declare Your Interlace Codebase Path
+Declare a place where to clone the GitHub repositories the standard way somewhere in your computer. Include the `sas-quantome` directory to store multiple Interlace repositories:
 ```bash
 REPO_PATH="${HOME}/github.com/sas-quantome"
 ```
 
-### 4.2 Create Your Codebase
+#### 4.3 Create Your Interlace Codebase Directory
 Create the directory:
 ```bash
 mkdir -p "${REPO_PATH}"
 ```
 
-### 4.3 Clone the interlace-ex 
+#### 4.4 Clone the interlace-ex Repository
 Clone the repository in the `sas-quantome` folder:
 ```bash
 cd "${REPO_PATH}"
 git clone https://github.com/sas-quantome/interlace-ex.git
 ```
 
-### 4.4 Build the Toolchain
-Ensure you have [Go](https://go.dev/learn/) installed, then compile the example applications; you will find the compiled products in the `bin` filder:
+#### 4.5 Check the Makefile
+Review the Makefile and then run the following commands:
+```bash
+cd "${REPO_PATH}/interlace-ex"
+make help
+```
+
+#### 4.6 Build the Toolchain
+If all is well in your installation, you will find the compiled products in the `bin` folder:
 ```bash
 cd "${REPO_PATH}/interlace-ex"
 make build
 ```
 
-### 4.5 Run the Test Suite
-Validate the test packages and integration pipelines:
-```bash
-cd "${REPO_PATH}/go-interlace"
-make test
-```
-
-### 4.6 Run Vet
-Scan the source code for suspicious constructs and locate them if any are detected:
-```bash
-cd "${REPO_PATH}/go-interlace"
-make vet
-```
-
-### 4.7 Visualize the Coverage
-Reformat the coverage results and print them to standard output:
-```bash
-cd "${REPO_PATH}/go-interlace"
-make coverage
-```
-
-### 4.8 Cleanup
-Remove all the Quick Start files created including the `bin` folder:
-```bash
-cd "${REPO_PATH}/go-interlace"
-make clean
-```
-
-### 4.9 Make Install
+#### 4.7 Make Install
 Compile the software and install the binaries in the equivalent of `$GOPATH/bin`:
 ```bash
 GOPATH="where/ever/you/want"
-cd "${REPO_PATH}/go-interlace"
+cd "${REPO_PATH}/interlace-ex"
 make install
 ```
 **Attention:** if `GOPATH="where/ever/you/want"` then `make` expects: `where/ever/you/want/bin`.
 
-### 5. Query the *Gene* Datastack
+#### 4.8 Cleanup
+Remove the `bin` folder:
+```bash
+cd "${REPO_PATH}/interlace-ex"
+make clean
+```
 
-### 6. Develop Your Own Datastack
+### 5. Build the *Gene* Datastack
+
+#### 5.1 Declare Your Interlace Environment Variables
+Define a place where to create the **Interlace Basepath** and download files somewhere in your computer, normally as follows:
+```bash
+ENV_AEE_BASE_PATH="${HOME}/interlace-ex"
+ENV_ALT_DATA_PATH="${ENV_AEE_BASE_PATH}/data"
+```
+**Attention:** `ENV_ALT_DATA_PATH` and `ENV_AEE_BASE_PATH` are visible only in the active shell. It is better to add them in your `.bashrc` or `.zshrc` file.
+
+```bash
+export ENV_AEE_BASE_PATH="${HOME}/interlace-ex"
+export ENV_ALT_DATA_PATH="${ENV_AEE_BASE_PATH}/data"
+```
+
+#### 5.2 Create Your Interlace Base
+Create the Interlace directory structure:
+```bash
+mkdir -p ${ENV_AEE_BASE_PATH}/agent ${ENV_AEE_BASE_PATH}/entity ${ENV_AEE_BASE_PATH}/event
+mkdir -p $ENV_ALT_DATA_PATH
+```
+
+- **agent:** Agent data.
+- **data:** Downloaded datasets.
+- **entity:** Refined binary data.
+- **event:** Intermediate compressed files, Bash scripts, and logs.
+
+#### 5.3 Review the [URI](./configs/input/uri.txt), [URL](./configs/input/url.txt), and [b31003](./scripts/bash/b31003)
+
+- Take a look to these files before proceeding.
+- Adapt the [URI](./configs/input/uri.txt) `file:///` paths to your local file system.
+
+#### 5.4 Download the *Gene* Datasets
+Validate URL links, download, rename non-persistent filenames, and move into the `ENV_ALT_DATA_PATH` in less than 8 minutes:
+```bash
+make download
+```
+
+#### 5.5 Create the *Gene* Datasets
+Create the *Gene* binary files in about ~7 minutes.
+```bash
+make gene
+```
+
+- Review the log files in the event action directory.
+- You should get the same tree but with your actual time tag:
+
+```text
+interlace-ex
+├── agent
+├── data
+│   ├── HUMAN_9606_idmapping.dat.gz
+│   ├── NCBI2Reactome_All_Levels.txt
+│   ├── NCBI2Reactome_PE_Reactions.txt
+│   ├── ReactionPMIDS.txt
+│   ├── gene2accession.gz
+│   ├── gene2ensembl.gz
+│   ├── gene2go.gz
+│   ├── gene2pubmed.gz
+│   ├── gene_info.gz
+│   ├── gene_orthologs.gz
+│   ├── gene_summary.gz
+│   ├── generifs_basic.gz
+│   ├── gsso.obo
+│   ├── gwas-catalog-ancestry.tsv.gz
+│   ├── gwas-catalog-associations-annotated.tsv.gz
+│   ├── gwas-efo-trait-mappings.tsv.gz
+│   ├── hp.obo
+│   ├── interactions.gz
+│   ├── mim2gene_medgen
+│   ├── mondo.obo
+│   ├── oba.obo
+│   ├── string-protein-links.tsv.gz
+│   └── variant_summary.txt.gz
+├── entity
+│   └── gene
+│       ├── chemical_reaction
+│       │   └── 20260906180032
+│       │       ├── catalog
+│       │       │   ├── suk_chemical_reaction_hash_id_m.bin
+│       │       │   └── uuk_chemical_reaction_text_s.bin
+│       │       ├── enumeration
+│       │       │   └── uuk_reaction_entity_cv_s.bin
+│       │       └── property
+│       │           ├── sdk_entrez_gene_id_u.bin
+│       │           ├── udk_pubmed_id_u.bin
+│       │           ├── udk_reaction_entity_cv_d.bin
+│       │           ├── udk_reaction_hash_id_m.bin
+│       │           └── udk_reactome_hsa_id_u.bin
+│       ├── function
+│       │   └── 20260906180032
+│       │       ├── catalog
+│       │       │   ├── suk_function_hash_id_m.bin
+│       │       │   └── uuk_function_text_s.bin
+│       │       ├── enumeration
+│       │       └── property
+│       │           ├── sdk_entrez_gene_id_u.bin
+│       │           ├── udk_pubmed_id_u.bin
+│       │           ├── udk_rif_hash_id_m.bin
+│       │           └── udk_taxonomy_id_u.bin
+│       ├── genetic_variation
+│       │   └── 20260906180032
+│       │       ├── catalog
+│       │       │   ├── suk_genetic_variation_hash_id_m.bin
+│       │       │   └── uuk_genetic_variation_text_s.bin
+│       │       ├── enumeration
+│       │       │   └── uuk_bit_flags_cv_s.bin
+│       │       └── property
+│       │           ├── sdk_entrez_gene_id_u.bin
+│       │           ├── udk_bit_flags_m.bin
+│       │           ├── udk_conical_allele_id_u.bin
+│       │           ├── udk_omim_id_u.bin
+│       │           ├── udk_refsnp_id_u.bin
+│       │           ├── udk_variation_hash_id_m.bin
+│       │           └── udk_variation_id_u.bin
+│       ├── genomic_variation
+│       │   └── 20260906180032
+│       │       ├── catalog
+│       │       │   ├── suk_genomic_variation_hash_id_m.bin
+│       │       │   └── uuk_genomic_variation_text_s.bin
+│       │       ├── enumeration
+│       │       │   └── uuk_bit_flags_cv_s.bin
+│       │       └── property
+│       │           ├── sdk_entrez_gene_id_u.bin
+│       │           ├── udk_bit_flags_u.bin
+│       │           ├── udk_gwas_hash_id_m.bin
+│       │           ├── udk_ontology_id_s.bin
+│       │           ├── udk_pubmed_id_u.bin
+│       │           └── udk_refsnp_id_u.bin
+│       ├── medical_genetics
+│       │   └── 20260906180032
+│       │       ├── catalog
+│       │       ├── enumeration
+│       │       │   └── uuk_bit_flags_cv_s.bin
+│       │       └── property
+│       │           ├── sdk_entrez_gene_id_u.bin
+│       │           ├── udk_bit_flags_u.bin
+│       │           ├── udk_medgen_cui_s.bin
+│       │           └── udk_omim_id_u.bin
+│       ├── metadata
+│       │   └── 20260906180032
+│       │       ├── catalog
+│       │       │   ├── suk_metadata_hash_id_m.bin
+│       │       │   └── uuk_metadata_text_s.bin
+│       │       ├── enumeration
+│       │       │   └── uuk_bit_flags_cv_s.bin
+│       │       └── property
+│       │           ├── suk_entrez_gene_id_u.bin
+│       │           ├── udk_bit_flags_u.bin
+│       │           ├── udk_chromosome_s.bin
+│       │           ├── udk_gene_name_s.bin
+│       │           ├── udk_gene_symbol_s.bin
+│       │           ├── udk_metadata_hash_id_m.bin
+│       │           ├── udk_name_synonyms_set_s.bin
+│       │           ├── udk_symbol_synonyms_set_s.bin
+│       │           ├── udk_taxonomy_id_u.bin
+│       │           └── udk_xdb_id_set_s.bin
+│       ├── molecular_interaction
+│       │   └── 20260906180032
+│       │       ├── catalog
+│       │       ├── enumeration
+│       │       └── property
+│       │           ├── sdk_entrez_gene_id_u.bin
+│       │           ├── udk_interactant_entrez_gene_id_u.bin
+│       │           ├── udk_interactant_taxonomy_id_u.bin
+│       │           ├── udk_pubmed_id_set_s.bin
+│       │           └── udk_taxonomy_id_u.bin
+│       ├── ontology
+│       │   └── 20260906180032
+│       │       ├── catalog
+│       │       │   ├── suk_ontology_hash_id_m.bin
+│       │       │   └── uuk_ontology_text_s.bin
+│       │       ├── enumeration
+│       │       │   └── uuk_bit_flags_cv_s.bin
+│       │       └── property
+│       │           ├── sdk_entrez_gene_id_u.bin
+│       │           ├── udk_bit_flags_m.bin
+│       │           ├── udk_go_hash_id_m.bin
+│       │           ├── udk_go_id_u.bin
+│       │           └── udk_pubmed_id_u.bin
+│       ├── ortholog
+│       │   └── 20260906180032
+│       │       ├── catalog
+│       │       ├── enumeration
+│       │       └── property
+│       │           ├── sdk_entrez_gene_id_u.bin
+│       │           ├── udk_ortholog_entrez_gene_id_u.bin
+│       │           ├── udk_ortholog_taxonomy_id_u.bin
+│       │           └── udk_taxonomy_id_u.bin
+│       ├── pathway
+│       │   └── 20260906180032
+│       │       ├── catalog
+│       │       │   ├── suk_pathway_hash_id_m.bin
+│       │       │   └── uuk_pathway_text_s.bin
+│       │       ├── enumeration
+│       │       └── property
+│       │           ├── sdk_entrez_gene_id_u.bin
+│       │           ├── udk_pathway_hash_id_m.bin
+│       │           └── udk_reactome_hsa_id_u.bin
+│       ├── product
+│       │   └── 20260906180032
+│       │       ├── catalog
+│       │       ├── enumeration
+│       │       │   └── uuk_synonym_category_cv_s.bin
+│       │       └── property
+│       │           ├── sdk_entrez_gene_id_u.bin
+│       │           ├── udk_protein_id_s.bin
+│       │           ├── udk_synonym_category_cv_d.bin
+│       │           └── udk_synonym_s.bin
+│       ├── protein_interaction
+│       │   └── 20260906180032
+│       │       ├── catalog
+│       │       ├── enumeration
+│       │       └── property
+│       │           ├── sdk_entrez_gene_id_u.bin
+│       │           ├── udk_association_ensp_id_i.bin
+│       │           ├── udk_association_entrez_gene_id_u.bin
+│       │           ├── udk_ensp_id_i.bin
+│       │           └── udk_likelihood_score_n.bin
+│       ├── pubmed_reference
+│       │   └── 20260906180032
+│       │       ├── catalog
+│       │       ├── enumeration
+│       │       └── property
+│       │           ├── sdk_entrez_gene_id_u.bin
+│       │           └── udk_pubmed_id_u.bin
+│       └── synonym
+│           └── 20260906180032
+│               ├── catalog
+│               ├── enumeration
+│               │   └── uuk_synonym_category_cv_s.bin
+│               └── property
+│                   ├── sdk_synonym_s.bin
+│                   ├── udk_entrez_gene_id_u.bin
+│                   ├── udk_protein_id_s.bin
+│                   ├── udk_synonym_category_cv_d.bin
+│                   └── udk_synonym_version_s.bin
+└── event
+    └── gene
+        └── w31001
+            └── 20260906180032
+                ├── action
+                │   ├── 20260906180328_a31001.log
+                │   ├── 20260906180406_a31002.log
+                │   ├── 20260906180445_a31003.log
+                │   ├── 20260906180456_a31004.log
+                │   ├── 20260906180505_a31005.log
+                │   ├── 20260906180540_a31006.log
+                │   ├── 20260906180540_a31007.log
+                │   ├── 20260906180603_a31008.log
+                │   ├── 20260906180610_a31009.log
+                │   ├── 20260906180754_a31010.log
+                │   ├── 20260906180803_a31011.log
+                │   ├── 20260906180804_a31012.log
+                │   ├── 20260906180806_a31013.log
+                │   ├── 20260906180916_a31014.log
+                │   └── 20260906180917_a31015.log
+                ├── artifact
+                └── function
+```
+
+### 6. Query the *Gene* Datastack
+
+### 7. Develop Your Own Datastack
 
