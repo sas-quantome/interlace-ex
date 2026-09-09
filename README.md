@@ -1,4 +1,4 @@
-###### September 9, 2026: interlace-ex readme v21
+###### September 9, 2026: interlace-ex readme v22
 
 # interlace-ex
 
@@ -18,7 +18,7 @@ Welcome to **interlace-ex**! Learn how to use the **interlace-go** library with 
 
 ### 1. Introduction
 
-Gene data from bioinformatics resources is indispensable to basic research, yet it is global, massive, and complex. The **interlace-go** [library](https://github.com/sas-quantome/interlace-go#interlace-go) simplifies data refinement for building and maintaining clean-slate datasets as primary storage ready for downstream processing. To demonstrate this in practice, human gene data is a good test case for **interlace-go**.
+Gene data from bioinformatics resources is indispensable to basic research, yet it is massive, nested, and messy. The **interlace-go** [library](https://github.com/sas-quantome/interlace-go#interlace-go) simplifies data refinement for building and maintaining clean-slate datasets as primary storage ready for downstream processing. To demonstrate this in practice, human gene data is a good test case for **interlace-go**.
 
 The software engineering outcome of **interlace-ex** consolidates 57 GB of uncompressed gene and disease information into 1.4 GB of refined **interlace-go** binary data assets, ready to load into memory and power up basic research. 
 
