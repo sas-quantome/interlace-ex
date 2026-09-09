@@ -1,4 +1,4 @@
-###### September 9, 2026: interlace-ex readme v18
+###### September 9, 2026: interlace-ex readme v19
 
 # interlace-ex
 
@@ -508,12 +508,12 @@ Refining and retrieving data have very distinct workflows. Refining data is proj
 Follow these instructions and find the code patterns that will guide you in making an **interlace-go** command line application:
 
 - Find out the differences in the main files [m1], [m2], [m13], and [m14].
-- Look for Start(), Commit(), and End() in [i1], [i2], [i13], and [i14].
-- Read the **interlace-go** PKG page and focus on Manager, Dispenser, Refiner, Interlacer, and Cowriter.
+- Look for `Start()`, `Commit()`, and `End()` in [i1], [i2], [i13], and [i14].
+- Read the **interlace-go** PKG page and focus on **Manager**, **Dispenser**, **Refiner**, **Interlacer**, and **Cowriter**.
 - Take a good glimpse at the [Interlace Architecture].
 - Discover the simplicity of the [Binary File Nomenclature].
 - Learn the [File Integrity Check] design.
-- See how to parse small tab-delimited files: [a31003_inp_gene_info](./internal/app/a31003/a31003_inp_gene_info.go)
+- See how simple is parsing a tab-delimited file: [a31003_inp_gene_info](./internal/app/a31003/a31003_inp_gene_info.go)
 
 [m1]: ./cmd/a31001/main.go
 [m2]: ./cmd/a31002/main.go
