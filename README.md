@@ -1,4 +1,4 @@
-###### September 8, 2026: interlace-ex readme v17
+###### September 9, 2026: interlace-ex readme v18
 
 # interlace-ex
 
@@ -501,5 +501,31 @@ interlace-ex
 
 ### 6. Query the *Gene* Datastack
 
+Refining and retrieving data have very distinct workflows. Refining data is project-specific, and retrieving is not. Retrieval applications must read any binary file part of the **Interlace Architecture**. For this reason, the **interlace-do** [toolset](https://github.com/sas-quantome/interlace-do) is built separately and uses the **interlace-ex** *Gene* as the data playground.
+
 ### 7. Develop Your Own Datastack
 
+Follow these instructions and find the code patterns that will guide you in making an **interlace-go** command line application:
+
+- Find out the differences in the main files [m1], [m2], [m13], and [m14].
+- Look for Start(), Commit(), and End() in [i1], [i2], [i13], and [i14].
+- Read the **interlace-go** PKG page and focus on Manager, Dispenser, Refiner, Interlacer, and Cowriter.
+- Take a good glimpse at the [Interlace Architecture].
+- Discover the simplicity of the [Binary File Nomenclature].
+- Learn the [File Integrity Check] design.
+- See how to parse small tab-delimited files: [a31003_inp_gene_info](./internal/app/a31003/a31003_inp_gene_info.go)
+
+[m1]: ./cmd/a31001/main.go
+[m2]: ./cmd/a31002/main.go
+[m13]: ./cmd/a31013/main.go
+[m14]: ./cmd/a31014/main.go
+
+[i1]: ./internal/app/a31001/a31001.go
+[i2]: ./internal/app/a31002/a31002.go
+[i13]: ./internal/app/a31013/a31013.go
+[i14]: ./internal/app/a31014/a31014.go
+
+[PKG]: https://github.com/sas-quantome/interlace-go/blob/main/pkg/README.md
+[Interlace Architecture]: https://github.com/sas-quantome/interlace-go/blob/main/pkg/README.md#9-directory-architecture-entities-and-events
+[Binary File Nomenclature]: https://github.com/sas-quantome/interlace-go/blob/main/pkg/README.md#10-binary-file-nomenclature
+[File Integrity Check]: https://github.com/sas-quantome/interlace-go/blob/main/pkg/README.md#11-binary-file-integrity-check
