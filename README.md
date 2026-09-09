@@ -1,4 +1,4 @@
-###### September 9, 2026: interlace-ex readme v19
+###### September 9, 2026: interlace-ex readme v20
 
 # interlace-ex
 
@@ -513,7 +513,7 @@ Follow these instructions and find the code patterns that will guide you in maki
 - Take a good glimpse at the [Interlace Architecture].
 - Discover the simplicity of the [Binary File Nomenclature].
 - Learn the [File Integrity Check] design.
-- See how simple is parsing a tab-delimited file: [a31003_inp_gene_info](./internal/app/a31003/a31003_inp_gene_info.go)
+- See how simple it is to collect data from a [tab-delimited file](./internal/app/a31003/a31003_inp_gene_info.go).
 
 [m1]: ./cmd/a31001/main.go
 [m2]: ./cmd/a31002/main.go
