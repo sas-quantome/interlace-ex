@@ -1,4 +1,4 @@
-###### September 7, 2026: interlace-ex cmd readme v6
+###### September 10, 2026: interlace-ex cmd readme v7
 
 # CMD
 
@@ -58,23 +58,23 @@ At the end of the data refinement process, the complete human gene dataset fits 
 
 ## Contents
 
-| AppID    | Dependencies | Data Assets & Sources                                                          |
-|----------|--------------|--------------------------------------------------------------------------------|
-| [a31001] |              | `Creates` the **Gene Product** Gob assets from NCBI Gene DB and UniProt.       |
-| [a31002] | [a31001]     | `Creates` the **Gene Synonym** Gob assets from the **Gene Product**.           |
-| [a31003] |              | `Creates` the **Gene Metadata** Gob assets from NCBI Gene DB.                  |
-| [a31004] |              | `Creates` the **Gene PubMed Reference** Gob assets from NCBI Gene DB.          |
-| [a31005] |              | `Creates` the **Gene Function** Gob assets from NCBI Gene DB RIF.              |
-| [a31006] |              | `Creates` the **Gene Ontology** Gob assets from NCBI Gene DB GO.               |
-| [a31007] |              | `Creates` the **Gene Medical Genetics** Gob assets from NCBI Gene DB MedGen.   |
-| [a31008] |              | `Creates` the **Gene Ortholog** Gob assets from NCBI Gene DB.                  |
-| [a31009] |              | `Creates` the **Gene Molecular Interaction** Gob assets from NCBI Gene DB RIF. |
-| [a31010] |              | `Creates` the **Gene Genetic Variation** Gob assets from NCBI ClinVar.         |
-| [a31011] | [a31002]     | `Creates` the **Gene Genomic Variation** Gob assets from EBI GWAS Catalog.     |
-| [a31012] |              | `Creates` the **Gene Pathway** Gob assets from Reactome.                       |
-| [a31013] |              | `Creates` the **Gene Chemical Reaction** Gob assets from Reactome.             |
-| [a31014] | [a31002]     | `Creates` the **Gene Protein Interaction** Gob assets from STRING DB.          |
-| [a31015] | [a31011]     | `Inserts` the GWAS Ancestry data to the **Gene Genomic Variation** asset.      |
+| AppID    | Dependencies | Data Assets & Sources                                                     |
+|----------|--------------|---------------------------------------------------------------------------|
+| [a31001] |              | `Creates` the **Gene Product** asset from NCBI Gene DB and UniProt.       |
+| [a31002] | [a31001]     | `Creates` the **Gene Synonym** asset from the **Gene Product**.           |
+| [a31003] |              | `Creates` the **Gene Metadata** asset from NCBI Gene DB.                  |
+| [a31004] |              | `Creates` the **Gene PubMed Reference** asset from NCBI Gene DB.          |
+| [a31005] |              | `Creates` the **Gene Function** asset from NCBI Gene DB RIF.              |
+| [a31006] |              | `Creates` the **Gene Ontology** asset from NCBI Gene DB GO.               |
+| [a31007] |              | `Creates` the **Gene Medical Genetics** asset from NCBI Gene DB MedGen.   |
+| [a31008] |              | `Creates` the **Gene Ortholog** asset from NCBI Gene DB.                  |
+| [a31009] |              | `Creates` the **Gene Molecular Interaction** asset from NCBI Gene DB RIF. |
+| [a31010] |              | `Creates` the **Gene Genetic Variation** asset from NCBI ClinVar.         |
+| [a31011] | [a31002]     | `Creates` the **Gene Genomic Variation** asset from EBI GWAS Catalog.     |
+| [a31012] |              | `Creates` the **Gene Pathway** asset from Reactome.                       |
+| [a31013] |              | `Creates` the **Gene Chemical Reaction** asset from Reactome.             |
+| [a31014] | [a31002]     | `Creates` the **Gene Protein Interaction** asset from STRING DB.          |
+| [a31015] | [a31011]     | `Inserts` the GWAS Ancestry data to the **Gene Genomic Variation** asset. |
 
 ### Economic Impact & Data Gravity
 
