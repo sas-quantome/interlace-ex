@@ -1,4 +1,4 @@
-###### September 10, 2026: interlace-ex cmd readme v7
+###### September 10, 2026: interlace-ex cmd readme v8
 
 # CMD
 
@@ -58,7 +58,7 @@ At the end of the data refinement process, the complete human gene dataset fits 
 
 ## Contents
 
-| AppID    | Dependencies | Data Assets & Sources                                                     |
+| AppID    | Dependencies | Application Aim                                                           |
 |----------|--------------|---------------------------------------------------------------------------|
 | [a31001] |              | `Creates` the **Gene Product** asset from NCBI Gene DB and UniProt.       |
 | [a31002] | [a31001]     | `Creates` the **Gene Synonym** asset from the **Gene Product**.           |
