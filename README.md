@@ -1,4 +1,4 @@
-###### September 9, 2026: interlace-ex readme v22
+###### September 25, 2026: interlace-ex readme v23
 
 # interlace-ex
 
@@ -15,6 +15,8 @@ Welcome to **interlace-ex**! Learn how to use the **interlace-go** library with 
 5) [Build the *Gene* Datastack](#5-build-the-gene-datastack)
 6) [Query the *Gene* Datastack](#6-query-the-gene-datastack)
 7) [Develop Your Own Datastack](#7-develop-your-own-datastack)
+8) [License & Legal Notice](#8-license--legal-notice)
+9) [Support and Commercial SLAs](#9-support-and-commercial-slas)
 
 ### 1. Introduction
 
@@ -22,7 +24,7 @@ Gene data from bioinformatics resources is indispensable to basic research, yet 
 
 The software engineering outcome of **interlace-ex** consolidates 57 GB of uncompressed gene and disease information into 1.4 GB of refined **interlace-go** binary data assets, ready to load into memory and power up basic research. 
 
-Consolidation and data refinement take less than five minutes on a modern personal computer. This agility makes daily updates possible across [23 IP addresses](configs/input/url.txt). 
+Consolidation and data refinement take less than five minutes on a modern personal computer with a cap of four threads. This agility makes daily updates possible across [23 IP addresses](configs/input/url.txt). 
 
 The **interlace-ex** code provides many examples of transforming raw data into refined binary assets using simply **interlace-go**.
 
@@ -277,7 +279,7 @@ make download
 ```
 
 #### 5.5 Create the *Gene* Datasets
-Create the *Gene* binary files in about ~7 minutes.
+Create the *Gene* binary files in about ~7 minutes. Jobs are executed sequentially, not in parallel.
 ```bash
 make gene
 ```
@@ -514,6 +516,27 @@ Follow these instructions and find the code patterns that will guide you in maki
 - Discover the simplicity of the [Binary File Nomenclature].
 - Learn the [File Integrity Check] design.
 - See how simple it is to collect data from a [tab-delimited file](./internal/app/a31003/a31003_inp_gene_info.go).
+
+### 8. License & Legal Notice
+
+This project is licensed under the **Apache License 2.0**.
+
+* **Permissive Reuse:** You are free to modify, distribute, and use this software in your own commercial or private applications.
+* **No Lock-In:** Your downstream solutions remain entirely your own.
+* **As-Is Basis:** Per Sections 7 and 8 of the Apache 2.0 License, this software is provided strictly on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND.
+
+For full details, please review the [LICENSE](LICENSE) and [NOTICE](NOTICE) files in the root of this repository.
+
+### 9. Support and Commercial SLAs
+
+This repository is an **open-source transparency initiative** and does not come with a dedicated maintenance or support SLA.
+
+Bug reports and feature suggestions can be submitted via GitHub Issues.
+
+If your organization requires guaranteed technical support, custom feature development, or integration assistance, please contact your account manager or reach out via [Quantome SAS](https://www.sas-quantome.com).
+
+***
+*Copyright © 2026 Quantome SAS. All rights reserved.*
 
 [m1]: ./cmd/a31001/main.go
 [m2]: ./cmd/a31002/main.go
