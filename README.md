@@ -1,8 +1,8 @@
-###### September 25, 2026: interlace-ex readme v23
+###### October 1, 2026: interlace-ex readme v24
 
 # interlace-ex
 
-Welcome to **interlace-ex**! Learn how to use the **interlace-go** library with the **interlace-ex** code examples. This open-source educational repository guides you through consolidating human gene data, including products, interactants, genetic variants, and diseases, as a hands-on data refinement exercise.
+Welcome to **interlace-ex**! Learn how to use the **interlace-go** library with the **interlace-ex** code examples to build the Gene data stack. This open-source educational repository guides you through consolidating human gene data, including products, interactants, genetic variants, and diseases, as a hands-on data refinement exercise.
 
 ![interlace-ex](assets/interlace-ex.png)
 
