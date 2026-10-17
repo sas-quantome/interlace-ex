@@ -1,5 +1,10 @@
 #!/bin/bash
 #
+# Copyright 2026 SAS Quantome
+# SPDX-License-Identifier: Apache-2.0
+#
+
+#
 # Builds the Gene datastack in one command-line (please update the file:/// paths in the configs/uri.txt file).
 # Applications a31001..a31015 must be installed first with make install, see the provided Makefile.
 # This script executes a31001..a31015 in sequential order.

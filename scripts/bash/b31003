@@ -1,5 +1,10 @@
 #!/bin/bash
 #
+# Copyright 2026 SAS Quantome
+# SPDX-License-Identifier: Apache-2.0
+#
+
+#
 # Description: Moves the files to the ENV_ALT_DATA_PATH with stable filenames.
 #
 # Files that have unstable names are renamed, e.g., 9606.protein.links.v12.5.txt.gz to string-protein-links.tsv.gz

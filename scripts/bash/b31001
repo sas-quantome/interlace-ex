@@ -1,5 +1,10 @@
 #!/bin/bash
 #
+# Copyright 2026 SAS Quantome
+# SPDX-License-Identifier: Apache-2.0
+#
+
+#
 # Description: Reports broken URLs from a list of URLs using wget or curl.
 
 # --- Input Validation ---
