@@ -1,0 +1,43 @@
+name: Build and Attach Binaries
+
+# 1. Trigger the workflow when a version tag (e.g., v1.0.0) is pushed
+on:
+  push:
+    tags:
+      - 'v*'
+
+# 2. Grant permissions to upload files to the Release page
+permissions:
+  contents: write
+
+jobs:
+  build-and-upload:
+    name: Build for ${{ matrix.os }}
+    runs-on: ubuntu-latest
+
+    # 3. Define the operating systems you want to build for
+    strategy:
+      matrix:
+        os: [linux, windows, darwin] # darwin is macOS
+
+    steps:
+      # Step A: Download your code onto the GitHub server
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # Step B: Set up your programming language (Change to setup-node, setup-python, etc.)
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.27'
+
+      # Step C: Compile the code. (Change this to your specific build command)
+      - name: Compile Binary
+        run: |
+          GOOS=${{ matrix.os }} GOARCH=amd64 go build -o my-app-${{ matrix.os }} main.go
+
+      # Step D: Upload the compiled binary to the GitHub Release
+      - name: Attach to Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: my-app-${{ matrix.os }}*
