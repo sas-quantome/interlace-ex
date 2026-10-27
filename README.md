@@ -1,6 +1,8 @@
-###### October 1, 2026: interlace-ex readme v24
+###### October 27, 2026: interlace-ex readme v25
 
 # interlace-ex
+
+[![Build Status](https://github.com/sas-quantome/interlace-ex/actions/workflows/release.yml/badge.svg)](https://github.com/sas-quantome/interlace-ex/actions/workflows/release.yml) [![Latest Release](https://img.shields.io/github/v/release/sas-quantome/interlace-ex?include_prereleases&sort=semver)](https://github.com/sas-quantome/interlace-ex/releases) [![Go Version](https://img.shields.io/github/go-mod/go-version/sas-quantome/interlace-ex)](https://github.com/sas-quantome/interlace-ex/blob/main/go.mod)
 
 Welcome to **interlace-ex**! Learn how to use the **interlace-go** library with the **interlace-ex** code examples to build the Gene data stack. This open-source educational repository guides you through consolidating human gene data, including products, interactants, genetic variants, and diseases, as a hands-on data refinement exercise.
 
