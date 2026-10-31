@@ -1,4 +1,4 @@
-###### October 27, 2026: interlace-ex readme v25
+###### October 31, 2026: interlace-ex readme v26
 
 # interlace-ex
 
@@ -280,8 +280,8 @@ Validate URL links, download, rename non-persistent filenames, and move into the
 make download
 ```
 
-#### 5.5 Create the *Gene* Datasets
-Create the *Gene* binary files in about ~7 minutes. Jobs are executed sequentially, not in parallel.
+#### 5.5 Create the *Gene Entity Assets*
+Create the *Gene* binary files in about ~7 minutes when files are pre-downloaded. Jobs are executed sequentially, not in parallel. To run jobs in parallel, see [a32005] in [interlace-do](https://github.com/sas-quantome/interlace-do).
 ```bash
 make gene
 ```
@@ -554,3 +554,4 @@ If your organization requires guaranteed technical support, custom feature devel
 [Interlace Architecture]: https://github.com/sas-quantome/interlace-go/blob/main/pkg/README.md#9-directory-architecture-entities-and-events
 [Binary File Nomenclature]: https://github.com/sas-quantome/interlace-go/blob/main/pkg/README.md#10-binary-file-nomenclature
 [File Integrity Check]: https://github.com/sas-quantome/interlace-go/blob/main/pkg/README.md#11-binary-file-integrity-check
+[a32005]: https://github.com/sas-quantome/interlace-do/blob/main/cmd/a32005/README.md
