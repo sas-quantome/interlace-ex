@@ -1,4 +1,4 @@
-###### November 1, 2026: interlace-ex readme v27
+###### November 1, 2026: interlace-ex readme v28
 
 # Interlace Ex: Human Gene & Disease Refinery
 
@@ -274,7 +274,7 @@ mkdir -p $ENV_ALT_DATA_PATH
 - Take a look to these files before proceeding.
 - Adapt the [URI](./configs/input/uri.txt) `file:///` paths to your local file system.
 
-#### 5.4 Download the *Gene* Datasets
+#### 5.4 Download the 57 GB *Gene* Datasets
 Validate URL links, download, rename non-persistent filenames, and move into the `ENV_ALT_DATA_PATH` in less than 8 minutes:
 ```bash
 make download
