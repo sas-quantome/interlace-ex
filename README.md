@@ -1,10 +1,10 @@
-###### October 31, 2026: interlace-ex readme v26
+###### November 1, 2026: interlace-ex readme v27
 
-# interlace-ex
+# Interlace Ex: Human Gene & Disease Refinery
 
 [![Build Status](https://github.com/sas-quantome/interlace-ex/actions/workflows/release.yml/badge.svg)](https://github.com/sas-quantome/interlace-ex/actions/workflows/release.yml) [![Latest Release](https://img.shields.io/github/v/release/sas-quantome/interlace-ex?include_prereleases&sort=semver)](https://github.com/sas-quantome/interlace-ex/releases) [![Go Version](https://img.shields.io/github/go-mod/go-version/sas-quantome/interlace-ex)](https://github.com/sas-quantome/interlace-ex/blob/main/go.mod)
 
-Welcome to **interlace-ex**! Learn how to use the **interlace-go** library with the **interlace-ex** code examples to build the Gene data stack. This open-source educational repository guides you through consolidating human gene data, including products, interactants, genetic variants, and diseases, as a hands-on data refinement exercise.
+Production benchmark and 15 reference Go CLI tools that crystallize 57 GB of uncompressed human genome, pathway, variation, and disease data across 23 sources into 1.4 GB of memory-ready binary assets (14 Interlace Assets) in minutes.
 
 ![interlace-ex](assets/interlace-ex.png)
 
@@ -281,7 +281,11 @@ make download
 ```
 
 #### 5.5 Create the *Gene Entity Assets*
-Create the *Gene* binary files in about ~7 minutes when files are pre-downloaded. Jobs are executed sequentially, not in parallel. To run jobs in parallel, see [a32005] in [interlace-do](https://github.com/sas-quantome/interlace-do).
+Create the *Gene* binary files. To prevent broken URL links, download the data in advance using the Makefile. When new datasets are released, some URLs change with the updated version number. There are two ways to create the binary files:
+
+1) **Bash script:** using the Makefile and [b31004](scripts/bash/b31004) ➝ sequential ➝ about 7 minutes
+2) **Deterministic pipeline:** using **interlace-do** agent [a32005] ➝ parallel ➝ under 5 minutes
+
 ```bash
 make gene
 ```
