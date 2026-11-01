@@ -1,4 +1,4 @@
-###### November 1, 2026: interlace-ex readme v29
+###### November 1, 2026: interlace-ex readme v30
 
 # Interlace Ex: Human Gene & Disease Refinery
 
@@ -26,7 +26,7 @@ Gene data from bioinformatics resources is indispensable to basic research, yet 
 
 The software engineering outcome of **interlace-ex** consolidates 57 GB of uncompressed gene and disease information into 1.4 GB of refined **interlace-go** binary data assets, ready to load into memory and power up basic research. 
 
-Consolidation and data refinement take less than five minutes on a modern personal computer with a cap of four threads. This agility makes daily updates possible across [23 IP addresses](configs/input/url.txt). 
+Consolidation and data refinement takes five minutes on a modern personal computer with a cap of four threads. This agility makes daily updates possible across [23 IP addresses](configs/input/url.txt). 
 
 The **interlace-ex** code provides many examples of transforming raw data into refined binary assets using simply **interlace-go**.
 
@@ -286,8 +286,8 @@ make download
 #### 5.5 Create the *Gene Entity Assets*
 Create the *Gene* binary files. To prevent broken URL links, download the data in advance using the Makefile. When new datasets are released, some URLs change with the updated version number. There are two ways to create the binary files:
 
-1) **Bash script:** using the Makefile and [b31004](scripts/bash/b31004) ➝ sequential ➝ about 7 minutes
-2) **Deterministic pipeline:** using **interlace-do** agent [a32005] ➝ parallel ➝ under 5 minutes
+1) **Bash script:** using the Makefile and [b31004](scripts/bash/b31004) ➝ sequential ➝ about 8 minutes
+2) **Deterministic pipeline:** using **interlace-do** agent [a32005] ➝ parallel ➝ about 5 minutes
 
 ```bash
 make gene
