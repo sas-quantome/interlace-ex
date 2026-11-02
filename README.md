@@ -1,6 +1,6 @@
-###### November 1, 2026: interlace-ex readme v30
+###### November 2, 2026: interlace-ex readme v31
 
-# Interlace Ex: Human Gene & Disease Refinery
+# Interlace Ex: 57 GB to 1.4 GB Human Gene & Disease Refinery
 
 [![Build Status](https://github.com/sas-quantome/interlace-ex/actions/workflows/release.yml/badge.svg)](https://github.com/sas-quantome/interlace-ex/actions/workflows/release.yml) [![Latest Release](https://img.shields.io/github/v/release/sas-quantome/interlace-ex?include_prereleases&sort=semver)](https://github.com/sas-quantome/interlace-ex/releases) [![Go Version](https://img.shields.io/github/go-mod/go-version/sas-quantome/interlace-ex)](https://github.com/sas-quantome/interlace-ex/blob/main/go.mod)
 
